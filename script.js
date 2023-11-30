@@ -9,7 +9,7 @@ function onNumberPressed(number) {
         return;
     }
 
-    resultText.innerHTML += number.toString()
+    resultText.innerHTML += number.toString();
 }
 
 function canOperate() {
@@ -48,7 +48,7 @@ function onOperationPressed(operation) {
     if (!canOperate()) return; // Makes sure the result window isn't empty
 
     if (operation === "=" && storedValue !== null) { // If = is pressed and there is a stored value
-        return canOperate(number);
+        return operate(number);
     } else if (operation === "c") {
         storedValue = null;
         operator = null;
